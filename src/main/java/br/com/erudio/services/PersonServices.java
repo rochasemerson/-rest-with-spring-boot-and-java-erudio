@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.erudio.data.vo.v1.PersonVO;
-import br.com.erudio.data.vo.v2.PersonVOV2;
 import br.com.erudio.exceptions.ResourceNotFoundException;
 import br.com.erudio.mapper.DozerMapper;
 import br.com.erudio.mapper.custom.PersonMapper;
@@ -51,7 +50,7 @@ public class PersonServices {
 		return vo;
 	}
 	
-	public PersonVOV2 createV2(PersonVOV2 person) {
+	/* public PersonVOV2 createV2(PersonVOV2 person) {
 		
 		logger.info("Creating one Person with V2!");
 		
@@ -60,6 +59,7 @@ public class PersonServices {
 		
 		return vo;
 	}
+	*/ 
 	
 	public PersonVO update(PersonVO person) {
 		
