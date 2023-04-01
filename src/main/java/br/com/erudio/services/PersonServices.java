@@ -32,7 +32,7 @@ public class PersonServices {
 		
 		logger.info("Finding all people");
 		
-		var persons = DozerMapper.parseListObjects( repository.findAll(), PersonVO.class);
+		var persons = DozerMapper.parseListObjects(repository.findAll(), PersonVO.class);
 		persons.stream()
 		.forEach(p -> p.add(linkTo(methodOn(PersonController.class).findById(p.getKey())).withSelfRel()));
 		return persons;
